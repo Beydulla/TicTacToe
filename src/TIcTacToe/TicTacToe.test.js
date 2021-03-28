@@ -38,8 +38,11 @@ describe("Tests TicTacToe Game", () => {
         });
 
         describe("Tests for finding next player", () => {
-            test("Expect next player to be X when previous one was O", () => {
+            test("Expect next player to be O when previous one was X", () => {
                 expect(game.nextPlayer("X")).toEqual("O");
+            });
+            test("Expect next player to be X when previous one was O", () => {
+                expect(game.nextPlayer("O")).toEqual("X");
             });
         });
 
