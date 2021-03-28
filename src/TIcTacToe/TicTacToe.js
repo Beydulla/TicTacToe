@@ -3,6 +3,23 @@ class TicTacToe {
         this.playerX = 'X';
         this.playerO = 'O';
         this.board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']];
+        this.count = 1;
+    }
+
+    start = () => {
+        let nextPlayer = this.playerX;
+        for( ; this.count <= 9; this.count++){
+            const position = this.randomPosition();
+            this.addPlayerMoveToBoard(nextPlayer, position);
+            console.log(this.drawBoard());
+            if(this.isWinner(nextPlayer)){
+                console.log("PLAYER " + nextPlayer + " WON!");
+                return;
+            }
+            nextPlayer = this.nextPlayer(nextPlayer);
+        }
+        console.log("GAME ENDS WITH A DRAW!")
+        return "GAME ENDS WITH A DRAW!";
     }
 
     drawBoard = () => {
