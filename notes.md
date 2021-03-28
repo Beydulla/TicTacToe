@@ -19,6 +19,11 @@ x|x|x
     - will have 3x3 array
     - array will have empty characters for each element
     - class will print the array with the required format.
+
+- random position for next move
+- check if the position is available on the board, if not then regenerate new one
+- identify next player
     
 ### Tech dept
 - can players have different names? 
+- can array size be different than 3x3 ?
