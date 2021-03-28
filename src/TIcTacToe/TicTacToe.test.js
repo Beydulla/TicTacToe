@@ -10,5 +10,11 @@ describe("Tests TicTacToe Game", () => {
         test("Expect TicTacToe class to have playerO with value O", () => {
             expect(game.playerO).toEqual("O");
         });
+        test("Expect TicTacToe class to have 3x3 board array with space characters for each element ", () => {
+            const expectedBoard = [[' ', ' ', ' '],
+                [' ', ' ', ' '],
+                [' ', ' ', ' ']]
+            expect(game.board).toEqual(expectedBoard);
+        });
     });
 })
