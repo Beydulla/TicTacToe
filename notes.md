@@ -43,4 +43,4 @@ check if the game is draw
 ### Tech dept
 - can players have different names? 
 - can array size be different than 3x3 ?
-
+- check if it is possible to test console.logs
