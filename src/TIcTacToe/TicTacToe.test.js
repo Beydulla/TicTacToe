@@ -7,5 +7,8 @@ describe("Tests TicTacToe Game", () => {
         test("Expect Board class to have playerX with value X", () => {
             expect(game.playerX).toEqual("X");
         });
+        test("Expect TicTacToe class to have playerO with value O", () => {
+            expect(game.playerO).toEqual("O");
+        });
     });
 })
