@@ -23,6 +23,13 @@ x|x|x
 - random position for next move
 - check if the position is available on the board, if not then regenerate new one
 - identify next player
+- update the board with player's move
+- draw the board with updated values and print it
+- check winner 
+  - vertical
+  - horizontal 
+  - diagonal
+
     
 ### Tech dept
 - can players have different names? 
