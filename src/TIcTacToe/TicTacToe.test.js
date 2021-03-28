@@ -92,4 +92,18 @@ describe("Tests TicTacToe Game", () => {
         });
 
     });
+
+   describe("Testing general result", () => {
+        const game = new TicTacToe();
+        const result = game.start();
+        if(game.count > 9){
+            test("Expect game to end with draw when the number of movements is more than 9", () => {
+                expect(result).toEqual("GAME ENDS WITH A DRAW!");
+            });
+        }else{
+            const winner = game.count % 2 === 1 ? "X" : "O";
+            expect(result).toEqual("PLAYER " + winner + " WON!");
+        }
+
+    });
 })
