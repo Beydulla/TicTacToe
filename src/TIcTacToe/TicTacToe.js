@@ -29,6 +29,11 @@ class TicTacToe {
                 return true;
             }
         }
+        for(let i = 0; i < this.board.length; i++){
+            if(this.board[i][0] === player && this.board[i][1] === player && this.board[i][2] === player){
+                return true;
+            }
+        }
 
     }
 }
