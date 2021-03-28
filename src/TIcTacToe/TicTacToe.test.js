@@ -11,10 +11,14 @@ describe("Tests TicTacToe Game", () => {
             expect(game.playerO).toEqual("O");
         });
         test("Expect TicTacToe class to have 3x3 board array with space characters for each element ", () => {
-            const expectedBoard = [[' ', ' ', ' '],
-                [' ', ' ', ' '],
-                [' ', ' ', ' ']]
+            const expectedBoard = [ [' ', ' ', ' '],
+                                    [' ', ' ', ' '],
+                                    [' ', ' ', ' ']]
             expect(game.board).toEqual(expectedBoard);
+        });
+        test("Expect TicTacToe class to draw an empty board in the beginning", () => {
+            const expectedBoard = " | | \n-+-+-\n | | \n-+-+-\n | | ";
+            expect(game.drawBoard(game.board)).toEqual(expectedBoard);
         });
     });
 })
