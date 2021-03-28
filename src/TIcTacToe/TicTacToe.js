@@ -16,6 +16,12 @@ class TicTacToe {
         const position =[Math.floor(Math.random() * 3), Math.floor(Math.random() * 3)];
         return this.board[position[0]][position[1]] !== " " ? this.randomPosition() : position;
     }
+
+    nextPlayer = (currentPlayer) => {
+        if(currentPlayer === this.playerX){
+            return this.playerO;
+        }
+    }
 }
 
 module.exports = {
