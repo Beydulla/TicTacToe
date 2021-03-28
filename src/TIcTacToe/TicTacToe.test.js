@@ -30,6 +30,11 @@ describe("Tests TicTacToe Game", () => {
                 expect(position[1]).toBeGreaterThanOrEqual(0)
                 expect(position[0]).toBeLessThanOrEqual(2)
             });
+
+            test("Expect TicTacToe object regenerate a new position if generated one is not empty in the board", () => {
+                game.board = [['X', 'X', 'O'], ['X', 'O', ' '], ['O', 'X', 'O']];
+                expect(game.randomPosition()).toEqual([1, 2])
+            });
         });
     });
 })
