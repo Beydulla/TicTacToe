@@ -35,8 +35,12 @@ x|x|x
   - right diagonal
   - left diagonal
   - return false if there is no winner
+check if the game is draw
+  - count number of movements
+  - it is draw if number of movements if greater than 9
 
     
 ### Tech dept
 - can players have different names? 
 - can array size be different than 3x3 ?
+
