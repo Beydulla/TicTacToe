@@ -36,5 +36,12 @@ describe("Tests TicTacToe Game", () => {
                 expect(game.randomPosition()).toEqual([1, 2])
             });
         });
+
+        describe("Tests for finding next player", () => {
+            test("Expect next player to be X when previous one was O", () => {
+                expect(game.nextPlayer("X")).toEqual("O");
+            });
+        });
+
     });
 })
