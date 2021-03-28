@@ -12,6 +12,10 @@ x|x|x
 
 ## UAT scenarios:
 - Game board creation
+- Player X won with a vertical line
+- Player O won with a horizontal line
+- Player X won with a diagonal line
+
 
 ### Notes:
 - TicTacToe class:
