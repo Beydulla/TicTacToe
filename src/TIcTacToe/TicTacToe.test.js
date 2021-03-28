@@ -20,5 +20,16 @@ describe("Tests TicTacToe Game", () => {
             const expectedBoard = " | | \n-+-+-\n | | \n-+-+-\n | | ";
             expect(game.drawBoard(game.board)).toEqual(expectedBoard);
         });
+
+        describe("Tests for getting random position for next move", () => {
+            const game = new TicTacToe();
+            test("Expect TicTacToe object to generate random position for the next move", () => {
+                const position = game.randomPosition();
+                expect(position[0]).toBeGreaterThanOrEqual(0)
+                expect(position[0]).toBeLessThanOrEqual(2)
+                expect(position[1]).toBeGreaterThanOrEqual(0)
+                expect(position[0]).toBeLessThanOrEqual(2)
+            });
+        });
     });
 })
