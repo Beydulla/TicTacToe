@@ -20,6 +20,8 @@ class TicTacToe {
     nextPlayer = (currentPlayer) => {
         if(currentPlayer === this.playerX){
             return this.playerO;
+        }else {
+            return this.playerX;
         }
     }
 }
