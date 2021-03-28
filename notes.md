@@ -28,7 +28,9 @@ x|x|x
 - check winner 
   - vertical
   - horizontal 
-  - diagonal
+  - right diagonal
+  - left diagonal
+  - return false if there is no winner
 
     
 ### Tech dept
