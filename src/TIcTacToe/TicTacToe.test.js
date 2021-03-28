@@ -45,13 +45,13 @@ describe("Tests TicTacToe Game", () => {
                 expect(game.nextPlayer("O")).toEqual("X");
             });
         });
-        describe("Test for updating the board with player's move", () => {
+
+    });
+    describe("Test for updating the board with player's move", () => {
+        test("Expect board to be updated with given player and position", () => {
             const game = new TicTacToe();
             game.addPlayerMoveToBoard("X", [1, 1]);
             expect(game.board[1][1]).toEqual("X")
-
         });
-
-
     });
 })
