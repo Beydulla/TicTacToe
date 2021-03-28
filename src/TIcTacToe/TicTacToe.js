@@ -11,10 +11,11 @@ class TicTacToe {
         for( ; this.count <= 9; this.count++){
             const position = this.randomPosition();
             this.addPlayerMoveToBoard(nextPlayer, position);
+            console.log("Player " + nextPlayer + ":");
             console.log(this.drawBoard());
             if(this.isWinner(nextPlayer)){
                 console.log("PLAYER " + nextPlayer + " WON!");
-                return;
+                return "PLAYER " + nextPlayer + " WON!";
             }
             nextPlayer = this.nextPlayer(nextPlayer);
         }
