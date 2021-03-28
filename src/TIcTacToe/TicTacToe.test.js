@@ -49,10 +49,15 @@ describe("Tests TicTacToe Game", () => {
     });
 
     describe("Test for updating the board with player's move", () => {
+        const game = new TicTacToe();
+        game.addPlayerMoveToBoard("X", [1, 1]);
         test("Expect board to be updated with given player and position", () => {
-            const game = new TicTacToe();
-            game.addPlayerMoveToBoard("X", [1, 1]);
             expect(game.board[1][1]).toEqual("X")
+        });
+
+        test("Expect a new board to be drawn when  board array is updated", () => {
+            const expectedBoard = " | | \n-+-+-\n |X| \n-+-+-\n | | ";
+            expect(game.drawBoard()).toEqual(expectedBoard)
         });
     });
 
@@ -79,5 +84,6 @@ describe("Tests TicTacToe Game", () => {
             game.board = [['X', ' ', 'O'], [' ', 'O', 'X'], ['O', ' ', ' ']];
             expect(game.isWinner("O")).toEqual(true);
         });
+
     });
 })
