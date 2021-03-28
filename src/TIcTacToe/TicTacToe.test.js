@@ -85,5 +85,11 @@ describe("Tests TicTacToe Game", () => {
             expect(game.isWinner("O")).toEqual(true);
         });
 
+        test("Expect game to end with draw when the number of movements is more than 9", () => {
+            const game = new TicTacToe();
+            game.count = 10;
+            expect(game.start()).toEqual("GAME ENDS WITH A DRAW!");
+        });
+
     });
 })
