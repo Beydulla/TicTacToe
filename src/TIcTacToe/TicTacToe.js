@@ -22,6 +22,15 @@ class TicTacToe {
     addPlayerMoveToBoard = (player, position) => {
         this.board[position[0]][position[1]] = player;
     }
+
+    isWinner = (player) => {
+        for(let i = 0; i < this.board.length; i++){
+            if(this.board[0][i] === player && this.board[1][i] === player && this.board[2][i] === player){
+                return true;
+            }
+        }
+
+    }
 }
 
 module.exports = {
