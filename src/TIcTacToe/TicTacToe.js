@@ -11,6 +11,11 @@ class TicTacToe {
                 board[1][0] + "|" + board[1][1] + "|" + board[1][2] + "\n-+-+-\n" +
                 board[2][0] + "|" + board[2][1] + "|" + board[2][2];
     }
+
+    randomPosition = () => {
+        return [Math.floor(Math.random() * 3), Math.floor(Math.random() * 3)];
+
+    }
 }
 
 module.exports = {
