@@ -68,5 +68,11 @@ describe("Tests TicTacToe Game", () => {
             game.board = [['X', 'O', ' '], ['O', 'O', 'O'], ['X', ' ', ' ']];
             expect(game.isWinner("O")).toEqual(true);
         });
+
+        test("Expect Player X to win with right diagonal line", () => {
+            const game = new TicTacToe();
+            game.board = [['X', 'O', ' '], ['O', 'X', 'O'], ['X', ' ', 'X']];
+            expect(game.isWinner("X")).toEqual(true);
+        });
     });
 })
