@@ -32,6 +32,9 @@ class TicTacToe {
                 return true;
             }
         }
+        if(this.board[0][0] === player && this.board[1][1] === player && this.board[2][2] === player){
+            return true;
+        }
 
     }
 }
