@@ -21,32 +21,33 @@ describe("Tests TicTacToe Game", () => {
             expect(game.drawBoard(game.board)).toEqual(expectedBoard);
         });
 
-        describe("Tests for getting random position for next move", () => {
-            const game = new TicTacToe();
-            test("Expect TicTacToe object to generate random position for the next move", () => {
-                const position = game.randomPosition();
-                expect(position[0]).toBeGreaterThanOrEqual(0)
-                expect(position[0]).toBeLessThanOrEqual(2)
-                expect(position[1]).toBeGreaterThanOrEqual(0)
-                expect(position[0]).toBeLessThanOrEqual(2)
-            });
-
-            test("Expect TicTacToe object regenerate a new position if generated one is not empty in the board", () => {
-                game.board = [['X', 'X', 'O'], ['X', 'O', ' '], ['O', 'X', 'O']];
-                expect(game.randomPosition()).toEqual([1, 2])
-            });
-        });
-
-        describe("Tests for finding next player", () => {
-            test("Expect next player to be O when previous one was X", () => {
-                expect(game.nextPlayer("X")).toEqual("O");
-            });
-            test("Expect next player to be X when previous one was O", () => {
-                expect(game.nextPlayer("O")).toEqual("X");
-            });
-        });
-
     });
+    describe("Tests for getting random position for next move", () => {
+        const game = new TicTacToe();
+        test("Expect TicTacToe object to generate random position for the next move", () => {
+            const position = game.randomPosition();
+            expect(position[0]).toBeGreaterThanOrEqual(0)
+            expect(position[0]).toBeLessThanOrEqual(2)
+            expect(position[1]).toBeGreaterThanOrEqual(0)
+            expect(position[0]).toBeLessThanOrEqual(2)
+        });
+
+        test("Expect TicTacToe object regenerate a new position if generated one is not empty in the board", () => {
+            game.board = [['X', 'X', 'O'], ['X', 'O', ' '], ['O', 'X', 'O']];
+            expect(game.randomPosition()).toEqual([1, 2])
+        });
+    });
+
+    describe("Tests for finding next player", () => {
+        const game = new TicTacToe();
+        test("Expect next player to be O when previous one was X", () => {
+            expect(game.nextPlayer("X")).toEqual("O");
+        });
+        test("Expect next player to be X when previous one was O", () => {
+            expect(game.nextPlayer("O")).toEqual("X");
+        });
+    });
+
     describe("Test for updating the board with player's move", () => {
         test("Expect board to be updated with given player and position", () => {
             const game = new TicTacToe();
