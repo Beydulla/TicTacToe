@@ -14,10 +14,7 @@ class TicTacToe {
 
     randomPosition = () => {
         const position =[Math.floor(Math.random() * 3), Math.floor(Math.random() * 3)];
-        if(this.board[position[0]][position[1]] !== " "){
-            return this.randomPosition;
-        }
-        return position;
+        return this.board[position[0]][position[1]] !== " " ? this.randomPosition() : position;
     }
 }
 
